@@ -1,0 +1,85 @@
+.button_container {
+  border: 0.1px solid #e8e1e1;
+  border-radius: 0.15rem;
+  position: relative;
+  transition: all ease-in 0.1s;
+  height: min-content;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.button_container.active {
+  background-color: #052336;
+}
+
+.button_container.require {
+  border: 0.1px solid #931e1e;
+}
+
+.left__button .button_container {
+  border-radius: 0;
+}
+
+.button_container:hover {
+  background-color: #122e40;
+  /* background-color: #283e4c; */
+  color: #c2c1c188;
+  box-shadow: 0 0 0.5px 0.25px #8a898988;
+}
+
+.button_container button {
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+  font-size: 1rem;
+  color: rgb(232, 225, 225);
+  outline: none;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.3px;
+  margin: 0.5rem 1.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.button_container div {
+  content: "";
+  position: absolute;
+  top: 105%;
+  background-color: #264557;
+  z-index: 999;
+  align-self: center;
+  transition: all ease-in 0.3s;
+  left: 0;
+  right: 0;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+}
+
+.button_container p {
+  padding: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.button_container p:hover {
+  border: 0.1px solid #c8bfbfbe;
+}
+.button_container:hover div {
+  transition: all ease-in 0.5s;
+  height: max-content;
+}
+
+.right__button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: auto;
+  transition: all ease-out 0.1s;
+}
